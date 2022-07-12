@@ -38,4 +38,20 @@ int main()
             }
         }
     }
-
+    cout << "Подходящие предметы: ";
+    for (int i = 0; i < k; i++)//выводим
+    {
+        weight += mass[1][i];
+        if (weight <= W)
+        {
+            cout << mass[3][i] << " ";
+            pay += mass[2][i];
+        }
+        else
+        {
+            weight -= mass[1][i];
+        }
+    }
+    cout << endl << "Общий вес: " << weight << endl << "Сумма: " << pay << endl << endl;
+    system("pause");
+}
